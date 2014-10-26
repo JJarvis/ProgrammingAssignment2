@@ -1,5 +1,6 @@
-## makeCacheMatrix - set up the list that contains the accessors for the matrix in question
-## cacheSolve - return the cached inverse if it hs already been instantiated, otherwise compue inv chache it and return it
+
+## functions to allow user to compute inverse of a matrix, where a caching strategy is used to improve performance
+
 
 ## makeCacheMatrix - set up the list that contains the accessors for the matrix in question
 
@@ -18,7 +19,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve - return the cached inverse if it hs already been instantiated, otherwise compue inv chache it and return it
+## cacheSolve - return the cached inverse if it hs already been instantiated, otherwise compute inverse
+## cache the value and return it to caller
 
 cacheSolve <- function(x=matrix(), ...) {
   m<-x$getmatrix()
